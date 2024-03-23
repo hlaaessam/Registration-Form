@@ -1,0 +1,389 @@
+
+/* @import url("");
+body{
+    background-color: beige;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.header{
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background: rgb(16, 16, 125); */
+    background: #446b6d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.header .logo{
+    font-size: 1.5em;
+    color: beige;
+    text-decoration: none;
+
+}
+
+.nav a {
+position: relative;
+font-size: 1.1em;
+color: beige;
+text-decoration: none;
+margin-left: 40px;
+}
+
+.nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: beige;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .4s;
+
+}
+
+.nav a:hover::after{
+    transform: scaleX(1);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    /* background-image: url('logo1.PNG') no-repeat; */
+    background-size: cover;
+    background: linear-gradient(rgb(244, 244, 223),rgb(244, 244, 223));
+    /* background: linear-gradient(#b6cac4,#b6cac4); */
+    background-position: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+/* .home .content{
+    max-width: 800px;
+    color: blue;
+} */
+
+
+.home .wrapper-register{
+    /* position:relative; */
+    
+    width: 870px;
+    height: 935px;
+    
+    background: transparent;
+
+    border: 2px solid rgba(4, 3, 3, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    /* background-color: rgb(244, 244, 223); */
+    display: flex;
+    
+
+    justify-content:center;
+    align-items:center; 
+   
+}
+
+/* form .user details{
+    display: flex;
+    flex-wrap: wrap;
+
+} */
+.wrapper-register h4{
+   
+    font-size: 3em;
+    color:#b4a485;
+    text-align:left; 
+    position: relative;
+ 
+   
+}
+
+
+.wrapper-register h4 {
+    content: "\a";
+    white-space: pre;
+    
+    
+}
+.wrapper-register h4::before {
+    content: "                ";
+    white-space: pre;
+    
+}
+
+
+/* .wrapper-register h3::before {
+    content: "\a";
+    white-space: pre;
+    
+} */
+
+
+.wrapper-register h6{
+   
+    font-size: 2em;
+    color:rgb(244, 244, 223);
+    text-align:left; 
+    position: relative;
+ 
+   
+}
+.wrapper-register h6::before {
+    content: "      ";
+    white-space: pre;
+    
+}
+
+.wrapper-register h6 {
+    content: "\a";
+    white-space: pre;
+    
+    
+}
+
+.wrapper-register .input-box{
+    
+    position:relative;
+    width: 800px;
+    height: 40px;
+    margin: 20px 0;
+    
+    /* width: calc(100% / 2 -20px); */
+    
+}
+
+
+
+
+
+.input-box input{
+    width: 75%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid #b4a485;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: black;
+    padding: 0 25px 0 45px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left:45px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:#446b6d;
+    pointer-events: none;
+    transition: .5s;
+
+   
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    font-size: .8em;
+    top: -8px;
+    left: 17px;
+}
+
+.input-box .icon{
+
+    position: absolute;
+    top: 10px;
+    /* left: 15px; */
+    right: 212
+    px;
+    font-size: 1.2em;
+    color:#446b6d ;
+
+
+}
+
+.wrapper-register .btn {
+    width: 80%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg,beige,#446b6d);
+    box-shadow: 0 8px 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    /* display: flex;
+    justify-content:right;
+    align-items: center; */
+
+
+}
+
+
+
+
+.gender-title{
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+    
+   
+}
+
+
+form .category{
+    display: flex;
+    width: 78%;
+    margin: 14px 0;
+    justify-content:space-around;
+}
+
+
+
+form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #023025;
+}
+
+form .category label .dot{
+    
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.35 ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three{
+    background: #446b6d;
+    border-color: #446b6d;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+
+/* Days */
+
+.days-title{
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+    
+}
+form .categoryday{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content:space-around;
+}
+
+form .categoryday label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #023025;
+}
+
+form .categoryday label .dot{
+    
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.35 ease;
+}
+#dot-4:checked ~ .categoryday label .four,
+#dot-5:checked ~ .categoryday label .five,
+#dot-6:checked ~ .categoryday label .six{
+    background: #446b6d;
+    border-color: #446b6d;
+}
+
+.days details .input[type="radio"]{
+    display: none;
+}
+
+/* 
+Hours */
+
+
+.appoinment-title{
+    font-weight: bold;
+    color: black;
+    font-size: 1em;
+    
+}
+form .categorybusiness{
+    display: flex;
+    width:75%;
+    margin: 14px 0;
+    justify-content: space-around;
+}
+
+form .categorybusiness label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #023025;
+}
+
+form .categorybusiness label .dot{
+    
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.35 ease;
+}
+#dot-7:checked ~ .categorybusiness label .seven,
+#dot-8:checked ~ .categorybusiness label .eight,
+#dot-9:checked ~ .categorybusiness label .nine{
+    background: #446b6d;
+    border-color: #446b6d;
+}
+
+.business details .input[type="radio"]{
+    display: none;
+}
+
+.abouttt .aboutt{
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(rgb(244, 244, 223),rgb(244, 244, 223));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}
